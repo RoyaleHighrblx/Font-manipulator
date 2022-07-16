@@ -21,9 +21,17 @@ function gotPoases(results){
     if(results.length > 0)
     {
         console.log(results);
+
+        leftWristX = results[0].pose.leftWrist.x;
+        rightWristX = results[0].pose.rightWrist.x;
+        difference = floor(leftWristX - rightWristX);
     }
 }
 
 function draw(){
-    background('#800000')
+    background('#6C91C2');
+    textSize(difference);
+    fill('#FFE787');
+    text('Hello', 50, 400);
+
 }
